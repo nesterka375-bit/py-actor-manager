@@ -9,8 +9,8 @@ class ActorManager:
         self.conn = sqlite3.connect(self.db_name)
         self.cursor = self.conn.cursor()
         self.cursor.execute(
-            f"""CREATE TABLE IF NOT EXISTS {self.table_name} 
-            (id INTEGER PRIMARY KEY AUTOINCREMENT, first_name TEXT 
+            f"""CREATE TABLE IF NOT EXISTS {self.table_name}
+            (id INTEGER PRIMARY KEY AUTOINCREMENT, first_name TEXT
             NOT NULL, last_name TEXT NOT NULL)"""
         )
         self.conn.commit()
